@@ -1,7 +1,5 @@
 # skills
 
-Skills for Scale AI.
-
 Claude Code skills. Copy a directory into `~/.claude/skills/`, then invoke it by name.
 
 ## abril-skill-htmls-scaleai
