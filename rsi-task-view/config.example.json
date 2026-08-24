@@ -1,0 +1,30 @@
+{
+  "_comment": "Every field is optional. Omit one and the build falls back to a default keyed by the metric in task.toml, then to a generated sentence. Only 'source' and 'out' are needed to produce a page at all, and both can be given on the command line instead.",
+
+  "source": "sample_cache_recursive_fv.html",
+  "out": "rsi-adaptive-cache-replacement.html",
+
+  "task_title": "Adaptive cache replacement",
+  "task_id": "adaptive-cache-replacement",
+
+  "one_line": "The model writes an online cache eviction policy, which is graded on held-out workloads spanning five traffic patterns at two cache sizes.",
+
+  "scoring": "<p>The shortfall between the policy's hit rate and the best hit rate achievable on the same request stream at the same cache size, averaged across every workload type and cache size in the graded split. Lower is better.</p>",
+
+  "axis_label": "Mean regret, held-out split (log scale). Lower values indicate better performance.",
+
+  "citation": [
+    "https://www.usenix.org/system/files/fast21-rodriguez.pdf",
+    "Rodriguez et al., <i>Learning Cache Replacement with CACHEUS</i>, USENIX FAST '21"
+  ],
+
+  "_models": "Drives one sentence in Model performance. Omit both lists and the sentence omits the split rather than guessing, because the run data does not record which models are candidates. Colours are assigned from the model names themselves, not from these lists.",
+  "sota_models": ["GPT-5.6-sol", "Claude Opus 5", "Muse-Spark 1.2"],
+  "comparison_models": ["Claude Sonnet 5", "Claude Haiku 4.5"],
+
+  "_metric": "Only needed when task.toml's metric name is missing or should be relabelled. Otherwise it is read from the source and used to look up the defaults above.",
+  "metric": "mean regret",
+
+  "_model_colours": "Pins a hue for one model, overriding the automatic slot assignment. Rarely needed.",
+  "model_colours": {}
+}

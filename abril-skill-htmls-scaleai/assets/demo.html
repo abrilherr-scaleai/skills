@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technical report style, component reference</title>
+<style>
+@font-face{font-family:'Aeonik';font-style:normal;font-weight:300;font-display:swap;
+  src:url(fonts/AeonikPro-Light.woff2) format('woff2')}
+@font-face{font-family:'Aeonik';font-style:normal;font-weight:400;font-display:swap;
+  src:url(fonts/AeonikPro-Regular.woff2) format('woff2')}
+@font-face{font-family:'Aeonik';font-style:normal;font-weight:500;font-display:swap;
+  src:url(fonts/AeonikPro-Medium.woff) format('woff')}
+@font-face{font-family:'Aeonik';font-style:normal;font-weight:700;font-display:swap;
+  src:url(fonts/AeonikPro-Bold.woff) format('woff')}
+</style>
+<link rel="stylesheet" href="tokens.css">
+</head>
+<body>
+<header>
+  <div class="hrow"><span class="wm">WORDMARK</span>
+    <span class="wmsub">quiet subtitle</span>
+    <span class="headmeta"><span>document-identifier</span></span></div>
+  <div class="tabbar">
+    <button aria-selected="true">Overview</button>
+    <button aria-selected="false">Second tab</button>
+    <button aria-selected="false">Third tab</button>
+  </div>
+</header>
+
+<main>
+<h1>Page title in Medium</h1>
+<p class="docid">document-identifier</p>
+<p class="standfirst">One sentence stating what this document reports and what the
+  measurement is, in Light at 15.5px.</p>
+
+<div class="stats">
+  <div class="stat"><span class="k">Count</span><span class="v">5</span>
+    <span class="n">an optional note</span></div>
+  <div class="stat"><span class="k">Best result</span><span class="v">0.03759</span>
+    <span class="n">series name</span></div>
+  <div class="stat"><span class="k">Reference</span><span class="v">0.058704</span></div>
+</div>
+
+<div class="sec split"><h2>Section heading</h2><div class="col">
+  <p>Body copy in Aeonik Light. The heading sits in a fixed left column and the prose
+  fills the right column up to 92ch, so the page reads as a document rather than a
+  memo pinned to the left edge.</p>
+  <p>A second paragraph, to show the rhythm. Inline <code>identifiers</code> and file
+  names such as <code>instruction.md</code> stay monospace; everything else is the
+  sans.</p>
+</div></div>
+
+<div class="grouprule"><code>subject-identifier</code></div>
+
+<div class="sec split"><h2>Key and value</h2><div class="col">
+  <div class="kv">
+    <dt>Wall clock</dt><dd>3,600 s</dd>
+    <dt>Submissions</dt><dd>50</dd>
+    <dt>Reference</dt><dd>0.058704 (a parenthetical gloss)</dd>
+  </div>
+</div></div>
+
+<div class="sec"><h2>Figure panel</h2>
+<figure>
+  <div class="fhead"><span class="ftitle">Chart title</span>
+    <div class="legend">
+      <span class="lg"><i style="background:#2a78d6"></i>Series one</span>
+      <span class="lg"><i style="background:#4a3aa7"></i>Series two</span>
+      <span class="lg"><i style="background:#008300"></i>Series three</span>
+      <span class="lg"><i class="dash"></i>reference</span>
+    </div>
+  </div>
+  <div class="fbody">
+    <svg viewBox="0 0 900 240" width="100%" role="img" aria-label="demo">
+      <line x1="60" y1="40" x2="700" y2="40" stroke="#E6E6EA"/>
+      <line x1="60" y1="120" x2="700" y2="120" stroke="#E6E6EA"/>
+      <line x1="60" y1="200" x2="700" y2="200" stroke="#8A8A92"/>
+      <text x="49" y="43" text-anchor="end" class="ax">0.1</text>
+      <text x="49" y="123" text-anchor="end" class="ax">0.05</text>
+      <text x="60" y="22" class="axl">Quantity, held-out split (log scale). Lower values indicate better performance.</text>
+      <line x1="60" y1="96" x2="700" y2="96" stroke="#8A8A92" stroke-dasharray="5 4"/>
+      <path d="M60 60L220 90L380 130L540 150L700 152" fill="none" stroke="#2a78d6"
+        stroke-width="2" stroke-linecap="round"/>
+      <path d="M60 80L220 100L380 108L540 112L700 114" fill="none" stroke="#4a3aa7"
+        stroke-width="2" stroke-linecap="round"/>
+      <path d="M60 150L220 160L380 168L540 176L700 178" fill="none" stroke="#008300"
+        stroke-width="2" stroke-linecap="round"/>
+      <circle cx="700" cy="152" r="4.5" fill="#2a78d6" stroke="#fff" stroke-width="2"/>
+      <circle cx="700" cy="114" r="4.5" fill="#4a3aa7" stroke="#fff" stroke-width="2"/>
+      <circle cx="700" cy="178" r="4.5" fill="#008300" stroke="#fff" stroke-width="2"/>
+      <rect x="710" y="94.5" width="13" height="3" rx="1.5" fill="#4a3aa7"/>
+      <text x="729" y="117" class="sl">Series two</text><text x="894" y="117" text-anchor="end" class="sv">0.0473</text>
+      <line x1="710" y1="96" x2="723" y2="96" stroke="#8A8A92" stroke-width="2" stroke-dasharray="4 3"/>
+      <text x="729" y="99" class="sl">reference</text><text x="894" y="99" text-anchor="end" class="sv">0.0587</text>
+      <text x="729" y="155" class="sl">Series one</text><text x="894" y="155" text-anchor="end" class="sv">0.0376</text>
+      <text x="729" y="181" class="sl">Series three</text><text x="894" y="181" text-anchor="end" class="sv">0.0731</text>
+      <text x="60" y="234" class="axl">X caption</text>
+    </svg>
+  </div>
+</figure>
+</div>
+
+<div class="sec"><h2>Table, grouped by entity</h2>
+<div class="wrap-x"><table class="rounds"><thead><tr>
+  <th>Entity</th><th class="n">Step</th><th class="n">Measurement</th><th class="n">Normalised</th>
+</tr></thead><tbody>
+  <tr class="grp"><td><span class="chip"><i style="background:#2a78d6"></i>Series one</span></td>
+    <td class="n">1</td><td class="n">0.0492</td><td class="n">0.162</td></tr>
+  <tr><td></td><td class="n">2</td><td class="n">0.04587</td><td class="n">0.219</td></tr>
+  <tr><td></td><td class="n">3</td><td class="n">0.03759</td><td class="n">0.360</td></tr>
+  <tr class="grp"><td><span class="chip"><i style="background:#4a3aa7"></i>Series two</span></td>
+    <td class="n">1</td><td class="n">0.05782</td><td class="n">0.015</td></tr>
+  <tr><td></td><td class="n">2</td><td class="n">0.04954</td><td class="n">0.156</td></tr>
+  <tr><td></td><td class="n">3</td><td class="n">0.04736</td><td class="n">0.193</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="sec"><h2>Disclosure, notice, buttons</h2>
+<button class="btn" type="button">Primary action</button>
+<div class="gap"><b>Notice</b>One sentence about missing or incomplete data.</div>
+<details><summary><span class="grow"><code>file-name.py</code></span>
+  <span class="tag">1,927 B</span></summary>
+  <div class="body"><pre>def example():
+    return "monospace, preserved alignment"</pre></div></details>
+<details open><summary><span class="grow">Transcript row</span>
+  <span class="note">metadata pushed right</span></summary>
+  <div class="body">
+    <div class="logrow say"><div class="lbl">says</div>
+      <div class="clip"><pre>A spoken turn renders in the sans.</pre></div></div>
+    <div class="logrow out"><div class="lbl">output</div>
+      <div class="clip more"><pre>total 32
+drwxrwxr-x 5 user group 6144 instruction.md
+-rw-rw-r-- 1 user group 4687 policy.py
+-rw-rw-r-- 1 user group 1927 task.toml
+drwxrwxr-x 2 user group 6144 tests
+-rw-rw-r-- 1 user group  982 cases.py
+-rw-rw-r-- 1 user group 5276 verifier.py
+-rw-rw-r-- 1 user group 3683 rubrics.jsonl
+-rw-rw-r-- 1 user group 1438 Dockerfile
+-rw-rw-r-- 1 user group 1885 grade.Dockerfile
+-rw-rw-r-- 1 user group  666 notes.md</pre>
+      <button class="btnghost" type="button">show all 11 lines</button></div></div>
+  </div></details>
+<p class="cite">Motivation: <a href="#">Author et al., <i>A paper title</i>, Venue 2025</a></p>
+</div>
+
+<div class="sec split"><h2>Emphasis</h2><div class="col">
+<p class="claim">A lead sentence stands in for a heading inside prose.</p>
+<p>Use it where a passage has three or four distinct claims that each want a
+paragraph but none deserves a section title. Medium weight, ink, nothing else.</p>
+<p><span class="key">One marked phrase per paragraph, carrying its claim.</span> The
+supporting figures take <strong>weight alone</strong>, so the page has exactly two
+levels of emphasis and neither of them is a hue. A metric's direction uses the same
+marker under `.dir`, which is nowrap because the phrase is short and fixed:
+<span class="dir">Lower values indicate better performance.</span></p>
+</div></div>
+
+<div class="sec split"><h2>Figure with commentary</h2><div class="col">
+<figure>
+  <div class="fhead"><span class="ftitle">Score against cumulative cost</span>
+    <div class="legend"><span class="lg"><i style="background:#2a78d6"></i>Series A</span>
+      <span class="lg"><i style="background:#4a3aa7"></i>Series B</span>
+      <span class="lg"><i class="dash"></i>reference</span></div>
+    <span class="fsub">Held-out score, log scale.
+      <span class="dir">Lower values indicate better performance.</span></span>
+  </div>
+  <div class="fbody"><svg viewBox="0 0 856 120" width="100%" role="img"
+      aria-label="illustrative two-series line chart">
+    <line x1="58" y1="100" x2="660" y2="100" stroke="#8A8A92"/>
+    <line x1="58" y1="46" x2="660" y2="46" stroke="#8A8A92" stroke-dasharray="5 4"/>
+    <path d="M80 88 L260 70 L440 40 L620 30" fill="none" stroke="#2a78d6"
+      stroke-width="2" stroke-linejoin="round"/>
+    <path d="M80 94 L260 90 L440 84 L620 62" fill="none" stroke="#4a3aa7"
+      stroke-width="2" stroke-linejoin="round"/>
+    <text x="359" y="118" text-anchor="middle" class="axl">Cumulative cost, log scale</text>
+    <rect x="674" y="28.5" width="13" height="3" rx="1.5" fill="#2a78d6"/>
+    <text x="693" y="33.5" class="sl">Series A</text>
+    <rect x="674" y="60.5" width="13" height="3" rx="1.5" fill="#4a3aa7"/>
+    <text x="693" y="65.5" class="sl">Series B</text>
+  </svg></div>
+  <figcaption>A run that ends early on this axis spent less,
+    <strong>not necessarily scored worse</strong>: horizontal extent is cost and
+    vertical position is score.</figcaption>
+</figure>
+<div class="fnote">
+<p><span class="key">The claim the figure supports goes here</span>, with the
+measurements behind it, set in from the panel by a hairline rather than boxed with
+it. Anything longer than two sentences belongs here and not in the caption.</p>
+<p>A second paragraph carries the limits on what the axis can settle, so a reader
+knows what the figure does not decide.</p>
+</div>
+</div></div>
+
+<div class="sec split"><h2>Record rows</h2><div class="col">
+<div class="group" style="border-left-color:#2a78d6"><h3>Entity A</h3>
+<details><summary><span class="grow">Step 1</span><span class="tag">score 0.162</span></summary>
+<div class="body ibody"><h4>What this step did</h4>
+<ul><li>A bullet from the record, reproduced in full rather than clipped.</li>
+<li>A second bullet.</li></ul>
+<h4>What it inherited</h4><p class="none">Not recorded for this step.</p></div></details>
+<details><summary><span class="grow">Step 2</span><span class="tag">score 0.219</span></summary>
+<div class="body ibody"><h4>What this step did</h4>
+<ul><li>Reach for this the moment a table would put two columns of prose side by
+side.</li></ul></div></details>
+</div>
+<h3>Generated manifest</h3>
+<pre class="tree">bundle.zip
+├── task/
+│   ├── instruction.md  (6,710 B)
+│   └── task.toml  (2,258 B)
+├── runs/
+│   └── entity-a.json  (1,105,583 B)
+└── summary.json  (40,305 B)</pre>
+</div></div>
+</main>
+</body>
+</html>
