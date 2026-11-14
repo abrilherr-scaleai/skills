@@ -1,11 +1,11 @@
 ---
 name: scale-one-pager
-description: "Build a one-page project summary (HTML plus a one-sheet PDF) for any Scale project in the minimalist black and white style of the RSI one-pager: big title, one description paragraph, then Methodology with a process diagram, Task structure as a file tree, Quality assurance checks, Domains with distribution charts, and Results with headline numbers and one plot. Use when someone asks for a one pager, one-page summary, project brief, leave-behind or \"scale one pager\" for a project, from any source (website, text, docs, GitHub repo, example task bundle)."
+description: "Build a one-page project summary (HTML plus a one-sheet PDF) for any Scale project in a minimalist black and white style: big title, one description paragraph, then Methodology with a process diagram, Task structure as a file tree, Quality assurance checks, Domains with distribution charts, and Results with headline numbers and one plot. Use when someone asks for a one pager, one-page summary, project brief, leave-behind or \"scale one pager\" for a project, from any source (website, text, docs, GitHub repo, example task bundle)."
 ---
 
 # scale-one-pager
 
-One letter page that summarises a project. Same look for every project; the content comes from the person's sources. `assets/template.html` holds every component. If `assets/example-rsi.html` exists (local only, not in the repository), it is the reference for look and density.
+One letter page that summarises a project. Same look for every project; the content comes from the person's sources. `assets/template.html` holds every component. If `assets/example.html` exists (local only, not in the repository), it is the reference for look and density.
 
 ## 1. Collect the inputs
 
@@ -39,7 +39,7 @@ A section with no content at all is removed, not padded. Sections can be renamed
 
 1. Copy `assets/template.html` to `<project-folder>/one-pager.html` (ask where if there is no obvious folder; default `~/<project-short-name>-one-pager/`). It already holds all the styles and the Scale mark.
 2. Replace every `{{...}}` slot. No `{{` may remain.
-3. Header: Scale mark plus the project short name. Never "RSI" unless the project is RSI.
+3. Header: Scale mark plus the project short name. Never another project's name.
 4. Layout: two columns that end at the same height. Left: Methodology, Task structure, Quality assurance. Right: Domains, Results. Move a section across if one column is much longer.
 5. Diagrams and charts are hand-written inline SVG using the template's classes (colors come from the tokens, so dark mode works):
    - **Process diagram:** one rounded box per step with arrows; add the return arrow only if the process loops. Check that every label fits inside its box.
