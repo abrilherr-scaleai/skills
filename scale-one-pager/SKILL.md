@@ -29,6 +29,7 @@ A section with no content at all is removed, not padded. Sections can be renamed
 - **Keep the person's wording.** When the source is their own text, copy sentences as written and cut whole sentences for length. Do not paraphrase. Fix only grammar they asked to fix.
 - No sentence may talk about delivery ("what we deliver", "deliverable", "we provide"). Describe the thing itself: "Task structure", "Each task contains".
 - Neutral, formal, client-safe: never "customer", nothing internal (pricing, staffing, tools, ticket names).
+- No first person: never "we", "our" or "us". Describe the project and the tasks, not the team.
 - No em dashes, en dashes or double hyphens. Use commas, colons or "to".
 - No intros that explain the page, no takeaways, no filler. One paragraph per section at most, apart from Results.
 - Sections must not repeat each other. If two overlap, keep one.
@@ -56,7 +57,7 @@ Run `scripts/fit.sh /abs/path/one-pager.html`. It picks the largest print font s
 
 - If it reports "STILL OVER ONE PAGE", cut content (whole sentences, or the least important section) and run it again. Do not shrink the type further.
 - Read the screenshot and the PDF: no overlapping chart labels, no text outside diagram boxes, both columns ending level, nothing on a second page.
-- Search the file for `{{`, `—`, `–`, "deliverable", "we deliver" and "customer"; all must be absent from visible text.
+- Search the file for `{{`, `—`, `–`, "deliverable", "customer" and the words "we", "our", "us"; all must be absent from visible text.
 - Open the HTML for the person (`open one-pager.html`).
 
 ## 5. Report back

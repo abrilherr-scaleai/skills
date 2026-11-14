@@ -36,6 +36,10 @@ numbers and one plot. Sources can be a website, text, a repository or an example
 bundle; the skill asks for whatever is missing. Uses Geist from Google Fonts, so it
 ships no font files.
 
+It is written to prevent AI slop and language that should not be shared externally:
+the source wording is kept and never padded, nothing is invented, and the page avoids
+first person ("we", "our"), "customer", "deliverable" and internal details.
+
 ![Example one-pager](scale-one-pager/assets/screenshot.png)
 
     SKILL.md              inputs to collect, content rules, build steps, checks
