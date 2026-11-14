@@ -36,6 +36,8 @@ numbers and one plot. Sources can be a website, text, a repository or an example
 bundle; the skill asks for whatever is missing. Uses Geist from Google Fonts, so it
 ships no font files.
 
+![Example one-pager](scale-one-pager/assets/screenshot.png)
+
     SKILL.md              inputs to collect, content rules, build steps, checks
     assets/template.html  the page with every component and marked slots
     assets/scale-mark.svg the logo
