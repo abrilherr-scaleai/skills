@@ -27,6 +27,20 @@ per task, five tabs, any model set and any iteration count.
 `SKILL.md` documents the workflow, every config key, and what is read from the source
 rather than supplied. `config.example.json` is a working config to copy.
 
+## scale-one-pager
+
+A one-page project summary (HTML plus a one-sheet PDF) for any project: big title and
+description, then Methodology with a process diagram, Task structure as a file tree,
+Quality assurance checks, Domains with distribution charts, and Results with headline
+numbers and one plot. Sources can be a website, text, a repository or an example task
+bundle; the skill asks for whatever is missing. Uses Geist from Google Fonts, so it
+ships no font files.
+
+    SKILL.md              inputs to collect, content rules, build steps, checks
+    assets/template.html  the page with every component and marked slots
+    assets/scale-mark.svg the logo
+    scripts/fit.sh        fits the page to one letter sheet, exports the PDF and a screenshot
+
 ## A note on the fonts
 
 Both skills ship Aeonik Pro under `assets/fonts/`, which is licensed commercial
