@@ -1,6 +1,6 @@
 ---
 name: scale-one-pager
-description: Build a one-page project summary (HTML plus a one-sheet PDF) for any Scale project in the minimalist black and white style of the RSI one-pager: big title, one description paragraph, then Methodology with a process diagram, Task structure as a file tree, Quality assurance checks, Domains with distribution charts, and Results with headline numbers and one plot. Use when someone asks for a one pager, one-page summary, project brief, leave-behind or "scale one pager" for a project, from any source (website, text, docs, GitHub repo, example task bundle).
+description: "Build a one-page project summary (HTML plus a one-sheet PDF) for any Scale project in the minimalist black and white style of the RSI one-pager: big title, one description paragraph, then Methodology with a process diagram, Task structure as a file tree, Quality assurance checks, Domains with distribution charts, and Results with headline numbers and one plot. Use when someone asks for a one pager, one-page summary, project brief, leave-behind or \"scale one pager\" for a project, from any source (website, text, docs, GitHub repo, example task bundle)."
 ---
 
 # scale-one-pager
